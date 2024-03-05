@@ -24,7 +24,7 @@ export const router = new Router({
         render: () => html`<app-home></app-home>`
       },
       {
-        path: 'https://windboat.github.io/pwa-starter',
+        path: 'https://windboat.github.io/pwa-starter/',
         title: 'Home',
         render: () => html`<app-home></app-home>`
       },
