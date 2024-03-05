@@ -24,6 +24,11 @@ export const router = new Router({
         render: () => html`<app-home></app-home>`
       },
       {
+        path: 'https://windboat.github.io/pwa-starter',
+        title: 'Home',
+        render: () => html`<app-home></app-home>`
+      },
+      {
         path: resolveRouterPath('about'),
         title: 'About',
         plugins: [
@@ -43,6 +48,6 @@ export const router = new Router({
     if(unresolvedPath) {
       resolvedPath = resolvedPath + unresolvedPath;
     }
-
+    console.log("resolveRouterPath: baseURL" + baseURL + ", unresolvedPath=" + unresolvedPath + ", resolvedPath=" + resolvedPath);
     return resolvedPath;
   }
