@@ -19,7 +19,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="PWA Starter" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
+
   <!-- This tag is used by the PWA Starter CLI to identify template projects. Don't remove if you are using the CLI. -->
   <meta name="pwa-starter-template-identity" content="pwa-starter"/>
 
@@ -41,14 +41,20 @@
 
 <body>
   <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
-  <app-index></app-index>
-
+  <p>test...</p>
+  <p id="p"></p>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register(
         '/sw.js'
       );
     }
+
+    document.write("<br>protocol=" + window.location.protocol);
+    document.write("<br>host=" + window.location.host);
+    document.write("<br>pathname=" + window.location.pathname);
+    document.write("<br>params=" + window.location.search);
+
   </script>
 </body>
 
