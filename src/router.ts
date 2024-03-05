@@ -24,9 +24,32 @@ export const router = new Router({
         render: () => html`<app-home></app-home>`
       },
       {
-        path: 'https://windboat.github.io/pwa-starter/',
+        path: '/',
         title: 'Home',
         render: () => html`<app-home></app-home>`
+      },
+      {
+        path: '/pwa-starter',
+        title: 'Home',
+        render: () => html`<app-home></app-home>`
+      },
+      {
+        path: '/test',
+        title: 'test',
+        plugins: [
+          lazy(() => import('./pages/app-about/app-about.js')),
+        ],
+        render: () => html`<app-about></app-about>`
+      },
+      {
+        path: '/test2',
+        title: 'test2',
+        render: (context) => 'Home route'
+      },
+      {
+        path: '/test3',
+        title: 'test3',
+        render: (context) => html`./pages/app-about/app-about.js`,
       },
       {
         path: resolveRouterPath('about'),
